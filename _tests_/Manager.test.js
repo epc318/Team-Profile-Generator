@@ -9,4 +9,8 @@ test("create an object for Manager", () =>{
 test("get input for managers office number", () =>{
     const manager = new Manager("John", 1698, "john@gmail.com", 12);
     expect(manager.officeNumber).toEqual(expect.any(Number));
-});    
+});
+test("get managers role (ie: Manager)", () =>{
+    const manager = new Manager("John", 1698, "john@gmail.com");
+    expect(manager.getRole()).toBe("Manager");
+});
