@@ -1,2 +1,2 @@
-const Profiler = require('./lib/Profiler.js')
-
+const Profiler = require('./lib/Profiler.js');
+;
