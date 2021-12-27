@@ -19,11 +19,8 @@
     "url": "https://github.com/epc318/Team-Profile-Generator/issues"
   },
   "homepage": "https://github.com/epc318/Team-Profile-Generator#readme",
-  "devDependencies": {
-    "inquire": "^0.4.8",
-    "jest": "^27.4.5"
-  },
   "dependencies": {
-    "inquirer": "^8.2.0"
+    "inquire": "^8.2.0",
+    "jest": "^27.4.5"
   }
 }
