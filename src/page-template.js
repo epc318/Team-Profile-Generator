@@ -1,5 +1,5 @@
-function generateManager(manager) {
-const htmlManagerTemp = manager.map(({ name, id, email, officeNumber }) => {
+function generateManager(teamManager) {
+const htmlManagerTemp = teamManager.map(({ name, id, email, officeNumber }) => {
     return `
     <div>
         <div>
@@ -95,9 +95,9 @@ function generatePage(data) {
                 <h1>Team Profiles</h1>
             </header>
             <main>
-                ${generateManager(data.managers)}
-                ${generateEngineer(data.engineers)}
-                ${generateIntern(data.interns)}
+                ${generateManager(data.teamManager)}
+                ${generateEngineer(data.engineer)}
+                ${generateIntern(data.intern)}
             </main>
             <footer>
                 <h3>&copy; ${new Date().getFullYear()} by Evan Carlson (Github Username: epc318)</h3>
