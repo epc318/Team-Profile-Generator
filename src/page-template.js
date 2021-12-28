@@ -1,7 +1,7 @@
 function generateManager(teamManager) {
 const htmlManagerTemp = teamManager.map(({ name, id, email, officeNumber }) => {
     return `
-    <div>
+    <div class="manager">
         <div>
             <h1>Team Manager</h1>
         </div>
@@ -27,7 +27,7 @@ const htmlManagerTemp = teamManager.map(({ name, id, email, officeNumber }) => {
 function generateEngineer(engineer) {
     const htmlEngineerTemp = engineer.map(({ name, id, email, github }) => {
         return `
-        <div>
+        <div class="manager">
             <div>
                 <h1>Engineer</h1>
             </div>
@@ -53,7 +53,7 @@ function generateEngineer(engineer) {
 function generateIntern(intern) {
     const htmlInternTemp = intern.map(({ name, id, email, school }) => {
         return `
-        <div>
+        <div class="manager">
             <div>
                 <h1>Intern</h1>
             </div>
