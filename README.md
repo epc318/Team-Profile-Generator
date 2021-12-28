@@ -15,7 +15,7 @@
 <p>Node.js as well as the inquirer.js package is necesary to run this application. Jest is required if you desire to perform testing. Copy the files or simply clone the repository. Navigate to the repository via git bash and run
 <code> node index.js </code> from the the root of the directory.</p>
 
-[Application Walkthrough Video:]()
+[Application Walkthrough Video:](https://watch.screencastify.com/v/kE1KwMy8CZm4lsrsAP4a)
 
 ## Usage
 <p>This application can be used to quickly create a team profile page for any professional company/group.</p>
