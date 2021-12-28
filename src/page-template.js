@@ -90,17 +90,18 @@ function generatePage(data) {
             <title>Team Profile Generator</title>
             <link rel="stylesheet" href="style.css">
         </head>
-
         <body>
-
-            <header></header>
-
-
-            <main></main>
-
-
-            <footer></footer>
+            <header>
+                <h1>Team Profiles</h1>
+            </header>
+            <main>
+                ${generateManager(data.managers)}
+                ${generateEngineer(data.engineers)}
+                ${generateIntern(data.interns)}
+            </main>
+            <footer>
+                <h3>&copy; ${new Date().getFullYear()} by Evan Carlson (Github Username: epc318)</h3>
+            </footer>
         </body>
-    </html>
-        `
+    </html>`
 }
