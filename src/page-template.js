@@ -22,7 +22,7 @@ const htmlManagerTemp = manager.map(({ name, id, email, officeNumber }) => {
     </div>`;
     });
     return `
-    ${managerHTML.join('')}`;
+    ${htmlManagerTemp.join('')}`;
 };
 function generateEngineer(engineer) {
     const htmlEngineerTemp = engineer.map(({ name, id, email, github }) => {
@@ -48,7 +48,7 @@ function generateEngineer(engineer) {
         </div>`;
         });
         return `
-        ${engineerHTML.join('')}`;
+        ${htmlEngineerTemp.join('')}`;
     };
 function generateIntern(intern) {
     const htmlInternTemp = intern.map(({ name, id, email, school }) => {
@@ -74,7 +74,7 @@ function generateIntern(intern) {
         </div>`;
         });
         return `
-        ${internHTML.join('')}`;
+        ${htmlInternTemp.join('')}`;
     };
 
 
@@ -104,4 +104,6 @@ function generatePage(data) {
             </footer>
         </body>
     </html>`
-}
+};
+module.exports = generatePage(data);
+
