@@ -228,7 +228,7 @@ Add an Intern
         })
 };
 
-promptManager({})
+promptTeamManager({})
 .then(promptEngineer)
 .then(promptIntern)
 .then(employeeData => {

@@ -105,5 +105,6 @@ function generatePage(data) {
         </body>
     </html>`
 };
-module.exports = generatePage(data);
+
+module.exports = generatePage;
 
