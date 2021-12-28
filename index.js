@@ -2,7 +2,7 @@ const { writeFile, copyFile } = require('./utils/generateHTML');
 const generatePage = require('./src/page-template');
 const inquirer = require('inquirer');
 const Intern = require('./lib/Intern');
-const Engineeer = require('./lib/Engineer');
+const Engineer = require('./lib/Engineer');
 const Manager = require('./lib/Manager');
 
 const promptTeamManager = employeeData => {
@@ -10,9 +10,9 @@ const promptTeamManager = employeeData => {
          employeeData.teamManager = []
      };
      console.log(`
-     =================
-     Add a New Manager
-     =================
+=================
+Add a New Manager
+=================
    `);
      return inquirer.prompt([
         {
@@ -84,14 +84,80 @@ const promptEngineer = employeeData => {
         employeeData.engineer = []
     };
     console.log(`
-    ===============
-    Add an Engineer
-    ===============
-  `);
-
-
-
-
-
+===============
+Add an Engineer
+===============
+    `);
+        return inquirer.prompt([
+            {
+            type: 'input',
+            name: 'name',
+            message: 'What is the Engineers name?',
+            validate: nameInput => {
+                if (nameInput) {
+                return true;
+                } else {
+                console.log('Please enter the Engineers name!');
+                return false;
+                }
+                }
+            
+            },
+            {
+                type: 'number',
+                name: 'id',
+                message: 'What is the team Engineers ID #?',
+                validate: nameInput => {
+                    if (nameInput) {
+                    return true;
+                    } else {
+                    console.log('Please enter the Engineers ID number!');
+                    return false;
+                    }
+                },
+            
+            },
+            {
+                type: 'input',
+                name: 'email',
+                message: 'What is the Engineers email address?',
+                validate: nameInput => {
+                    if (nameInput) {
+                    return true;
+                    } else {
+                    console.log('Please enter the Engineers full email address!');
+                    return false;
+                    }
+                },
+            },
+            {
+                type: 'input',
+                name: 'github',
+                message: 'What is the team Engineers Github Username?',
+                validate: nameInput => {
+                    if (nameInput) {
+                    return true;
+                    } else {
+                    console.log('Please enter the Engineers Github Username!');
+                    return false;
+                    }
+                },
+            },
+        ])
+        .then(({ name, id, email, github, confirmAddEngineer }) => {
+            employeeData.engineer.push(new Engineer(name, id, email, github));
+                if(confirmAddEngineer) {
+                    return promptEngineer(employeeData);
+                }
+    
+                return employeeData;
+        })
+    };
   
+
+
+
+
+
+
 }         
